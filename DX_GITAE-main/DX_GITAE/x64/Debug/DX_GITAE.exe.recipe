@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\DX_GITAE.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\ActionShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\ButtonPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\ColliderPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\ColliderVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\FilterShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\ReversePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\SpriteShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\TexturePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\TextureVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\x64\Debug\TutorialShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

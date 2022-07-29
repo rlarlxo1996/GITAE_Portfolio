@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{fe7b46c9-6812-4113-9a26-04e01f91b923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{a7bf4b70-62e0-4321-bc9e-f5c60abbd26b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Program">
+      <UniqueIdentifier>{11169f94-c667-4731-a834-c5e1dc62f46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{cee3af9b-fe35-4e3d-bab3-fc4f96de3a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{08ab58a7-fcaf-44d5-95dd-d4548379f8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{a5b6a1e1-c775-4169-b42e-3858bf64a2d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Device">
+      <UniqueIdentifier>{74d29f9e-65ff-492b-940e-3763f8e17825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Math">
+      <UniqueIdentifier>{34a8dcbf-b00c-4494-8c5f-6d9812e5f572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Render">
+      <UniqueIdentifier>{424f65a3-15b6-47ae-993f-0910f2635f00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Utility">
+      <UniqueIdentifier>{d3c20d81-a57a-46ac-ae5a-3f5d3cbd772c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DX_GITAE.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Framework\Device\Device.h">
+      <Filter>Framework\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeDef.h" />
+    <ClInclude Include="Framework\Math\Vector2.h">
+      <Filter>Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utility\InputManager.h">
+      <Filter>Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utility\Timer.h">
+      <Filter>Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\ConstantBuffer.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\GlobalBuffer.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\IndexBuffer.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\PixelShader.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\State\SamplerState.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\SRV.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\VertexBuffer.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\VertexLayOuts.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Render\VertexShader.h">
+      <Filter>Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Program\Program.h">
+      <Filter>Program</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\State\BlendState.h" />
+    <ClInclude Include="Framework\State\StateManager.h" />
+    <ClInclude Include="Framework\Math\Transform.h" />
+    <ClInclude Include="Framework\Collider\RectCollider.h" />
+    <ClInclude Include="Framework\Collider\CircleCollider.h" />
+    <ClInclude Include="Framework\Collider\Collider.h" />
+    <ClInclude Include="Framework\Render\ShaderManager.h" />
+    <ClInclude Include="Framework\Render\Shader.h" />
+    <ClInclude Include="Object\BasicObject\Quad.h" />
+    <ClInclude Include="Framework\Render\Texture.h" />
+    <ClInclude Include="Object\BasicObject\Sprite.h" />
+    <ClInclude Include="Framework\Animation\Action.h" />
+    <ClInclude Include="Object\BasicObject\Effect.h" />
+    <ClInclude Include="Framework\Utility\Utility.h" />
+    <ClInclude Include="Object\BasicObject\EffectManager.h" />
+    <ClInclude Include="Framework\Camera\Camera.h" />
+    <ClInclude Include="Framework\Utility\MathUtility.h" />
+    <ClInclude Include="Framework\Utility\BinaryWriter.h" />
+    <ClInclude Include="Framework\Utility\BinaryReader.h" />
+    <ClInclude Include="Framework\Utility\DirectWrite.h" />
+    <ClInclude Include="Framework\Utility\tinyxml2.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Object\TanMak\Player.h" />
+    <ClInclude Include="Scene\TanMakScene.h" />
+    <ClInclude Include="Object\TanMak\Bullet.h" />
+    <ClInclude Include="Object\TanMak\Gun.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DX_GITAE.ico" />
+    <Image Include="small.ico" />
+    <Image Include="Resource\Plane1.png" />
+    <Image Include="Resource\Carina_Nebula.png" />
+    <Image Include="Resource\Bullet.png" />
+    <Image Include="Resource\Gun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DX_GITAE.cpp" />
+    <ClCompile Include="framework.cpp" />
+    <ClCompile Include="Framework\Device\Device.cpp">
+      <Filter>Framework\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Math\Vector2.cpp">
+      <Filter>Framework\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utility\InputManager.cpp">
+      <Filter>Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utility\Timer.cpp">
+      <Filter>Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\ConstantBuffer.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\IndexBuffer.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\PixelShader.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\State\SamplerState.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\SRV.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\VertexBuffer.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Render\VertexShader.cpp">
+      <Filter>Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Program\Program.cpp">
+      <Filter>Program</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\State\BlendState.cpp" />
+    <ClCompile Include="Framework\State\StateManager.cpp" />
+    <ClCompile Include="Framework\Math\Transform.cpp" />
+    <ClCompile Include="Framework\Collider\RectCollider.cpp" />
+    <ClCompile Include="Framework\Collider\CircleCollider.cpp" />
+    <ClCompile Include="Framework\Collider\Collider.cpp" />
+    <ClCompile Include="Framework\Render\ShaderManager.cpp" />
+    <ClCompile Include="Framework\Render\Shader.cpp" />
+    <ClCompile Include="Object\BasicObject\Quad.cpp" />
+    <ClCompile Include="Framework\Render\Texture.cpp" />
+    <ClCompile Include="Object\BasicObject\Sprite.cpp" />
+    <ClCompile Include="Framework\Animation\Action.cpp" />
+    <ClCompile Include="Object\BasicObject\Effect.cpp" />
+    <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
+    <ClCompile Include="Framework\Camera\Camera.cpp" />
+    <ClCompile Include="Framework\Utility\MathUtility.cpp" />
+    <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
+    <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
+    <ClCompile Include="Framework\Utility\DirectWrite.cpp" />
+    <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Object\TanMak\Player.cpp" />
+    <ClCompile Include="Scene\TanMakScene.cpp" />
+    <ClCompile Include="Object\TanMak\Bullet.cpp" />
+    <ClCompile Include="Object\TanMak\Gun.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DX_GITAE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shader\TexturePixelShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\TextureVertexShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\TutorialShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\ColliderShader\ColliderVertexShader.hlsl" />
+    <FxCompile Include="Shader\ColliderShader\ColliderPixelShader.hlsl" />
+    <FxCompile Include="Shader\SpriteShader.hlsl" />
+    <FxCompile Include="Shader\ActionShader.hlsl" />
+    <FxCompile Include="Shader\FilterShader\FilterShader.hlsl" />
+    <FxCompile Include="Shader\ReversePixelShader.hlsl" />
+    <FxCompile Include="Shader\ButtonPixelShader.hlsl" />
+  </ItemGroup>
+</Project>
