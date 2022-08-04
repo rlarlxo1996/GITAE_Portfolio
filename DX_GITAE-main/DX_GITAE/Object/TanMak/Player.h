@@ -21,19 +21,29 @@ public:
 	void KeyBoardMove();
 	void Fire();
 	void SetGun();
+	void SetGun1();
 
 	shared_ptr<Transform> GetTransform() { return _sprite->GetTransform(); }
 	void SetPosition(Vector2 pos) { _sprite->GetTransform()->GetPos() = pos; }
 	vector<shared_ptr<class Bullet>>& GetBullet() { return _bullets; }
 	void SetAnimation(Player::State state);
 
+	void SetGunPosition();
+
 	Vector2 _pos = Vector2(CENTER);
 private:
 	shared_ptr<Sprite> _sprite;
 
 	vector<shared_ptr<Action>> _actions;
-	shared_ptr<Transform> _gunParent;
-	shared_ptr<class Gun> _gun;
+
+	shared_ptr<Transform> _gunParent1;
+	shared_ptr<Transform> _gunParent2;
+	shared_ptr<Transform> _gunParent3;
+
+	shared_ptr<class Gun> _gun1;
+	shared_ptr<class Gun> _gun2;
+	shared_ptr<class Gun> _gun3;
+
 	vector<shared_ptr<class Bullet>> _bullets;
 
 	State _state = State::F_IDLE;

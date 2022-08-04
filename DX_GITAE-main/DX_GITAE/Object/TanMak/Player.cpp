@@ -6,11 +6,7 @@ Player::Player()
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
 	_sprite->GetTransform()->GetScale() = { 0.5f,0.5f };
 
-	_gunParent = make_shared<Transform>();
-	_gunParent->SetParent(_sprite->GetTransform());
-
-	_gun = make_shared<Gun>();
-	_gun->SetPlayer(_gunParent);
+	SetGunPosition();
 
 	CreateActions();
 	SetAnimation(_state);
@@ -32,7 +28,7 @@ Player::~Player()
 void Player::Update()
 {
 	KeyBoardMove();
-	SetGun();
+
 	_time += DELTA_TIME;
 	if (_time >= _maxTime)
 	{
@@ -41,8 +37,11 @@ void Player::Update()
 	}
 
 	_sprite->Update();
-	_gunParent->UpdateWorld();
-	_gun->Update();
+	_gunParent1->UpdateWorld();
+	_gun1->Update();
+
+	_gunParent2->UpdateWorld();
+	_gun2->Update();
 
 	for (auto& action : _actions)
 	{
@@ -59,7 +58,8 @@ void Player::Update()
 void Player::Render()
 {
 	_sprite->Render();
-	_gun->Render();
+	_gun1->Render();
+	_gun2->Render();
 
 	for (auto& bullet : _bullets)
 		bullet->Render();
@@ -166,21 +166,26 @@ void Player::Fire()
 		if (bullet->_isActive == false)
 		{
 			bullet->_isActive = true;
-			bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
-			Vector2 dir = _gunParent->GetWorldPos();
+			bullet->GetTransform()->GetPos() = _gunParent1->GetWorldPos();
+			Vector2 dir = MOUSE_WORLD_POS - _gunParent1->GetWorldPos();
 			dir.Normalize();
 			bullet->SetDirection(dir);
 			break;
 		}
 	}
-}
 
-void Player::SetGun()
-{
-	// Gun Angle
-	Vector2 dir = _gunParent->GetWorldPos();
-	dir.Normalize();
-	_gun->GetTransform()->GetAngle() = dir.Angle();
+	for (auto& bullet : _bullets)
+	{
+		if (bullet->_isActive == false)
+		{
+			bullet->_isActive = true;
+			bullet->GetTransform()->GetPos() = _gunParent2->GetWorldPos();
+			Vector2 dir = MOUSE_WORLD_POS - _gunParent2->GetWorldPos();
+			dir.Normalize();
+			bullet->SetDirection(dir);
+			break;
+		}
+	}
 }
 
 void Player::SetAnimation(Player::State state)
@@ -201,4 +206,22 @@ void Player::SetAnimation(Player::State state)
 
 	_state = state;
 	_actions[static_cast<UINT>(state)]->Play();
+}
+
+void Player::SetGunPosition()
+{
+	_gunParent1 = make_shared<Transform>();
+	_gunParent1->SetParent(_sprite->GetTransform());
+
+	_gun1 = make_shared<Gun>();
+	_gun1->SetPlayer(_gunParent1);
+
+	_gunParent2 = make_shared<Transform>();
+	_gunParent2->SetParent(_sprite->GetTransform());
+	_gunParent2->GetPos().x = -60.0f;
+
+	_gun2 = make_shared<Gun>();
+	_gun2->SetPlayer(_gunParent2);
+
+	_gunParent3 = make_shared<Transform>();
 }

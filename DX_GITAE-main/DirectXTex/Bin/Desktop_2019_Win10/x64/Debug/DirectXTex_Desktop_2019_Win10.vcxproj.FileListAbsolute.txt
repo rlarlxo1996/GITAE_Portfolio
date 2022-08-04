@@ -6,3 +6,4 @@ C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\DirectXTex\Bin\Desktop_2019_Win10\x64\
 C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
 C:\Users\user\Downloads\DX_GITAE-main\DX_GITAE-main\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
 C:\Users\user\Desktop\김기태\GITAE_Portfolio\DX_GITAE-main\DX_GITAE-main\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
