@@ -4,7 +4,7 @@
 Bullet::Bullet()
 {
 	_quad = make_shared<Quad>(L"Resource/Bullet.png");
-	_quad->GetTransform()->GetScale() = { 0.1f,0.1f };
+	_quad->GetTransform()->GetScale() = { 0.2f,0.2f };
 
 	_col = make_shared<CircleCollider>(_quad->GetSize().x);
 	_col->SetParent(_quad->GetTransform());
@@ -40,7 +40,6 @@ void Bullet::Render()
 		return;
 
 	_quad->Render();
-	_col->Render();
 }
 
 void Bullet::SetDirection(const Vector2& direction)

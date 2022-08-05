@@ -8,7 +8,8 @@ TanMakScene::TanMakScene()
 	_backGround->GetTransform()->GetPos().y += _backGround->GetHalfSize().y;
 
 	_player = make_shared<Player>();
-	_player->SetPosition({ CENTER.x, CENTER.y});
+
+	_enemy = make_shared<Enemy>();
 	
 	_playerFollow = make_shared<Transform>();
 	_playerFollow->GetPos() = _player->GetTransform()->GetPos();
@@ -28,10 +29,25 @@ void TanMakScene::Update()
 
 	_player->Update();
 
+	_enemy->Update();
+
 	float distance = _player->GetTransform()->GetPos().Distance(_playerFollow->GetPos());
 
 	if (distance >= 10.0f)
 		_playerFollow->GetPos() = LERP(_playerFollow->GetPos(), _player->GetTransform()->GetPos(), DELTA_TIME * 5);
+
+	for (auto& bullet : _player->GetBullet())
+	{
+		if (bullet->GetCollider()->IsCollision(_enemy->GetCollider()))
+		{
+			_enemy->GetCollider()->SetColorRed();
+			break;
+		}
+		else
+		{
+			_enemy->GetCollider()->SetColorGreen();
+		}
+	}
 }
 
 void TanMakScene::Render()
@@ -39,6 +55,8 @@ void TanMakScene::Render()
 	_backGround->Render();
 
 	_player->Render();
+
+	_enemy->Render();
 }
 
 void TanMakScene::PostRender()

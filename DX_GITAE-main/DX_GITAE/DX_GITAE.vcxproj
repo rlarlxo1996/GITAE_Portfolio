@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Object\TanMak\Enemy.h" />
     <ClInclude Include="Object\TanMak\Gun.h" />
     <ClInclude Include="Object\TanMak\Bullet.h" />
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
@@ -198,6 +199,7 @@
     <ClInclude Include="TypeDef.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Object\TanMak\Enemy.cpp" />
     <ClCompile Include="Object\TanMak\Gun.cpp" />
     <ClCompile Include="Object\TanMak\Bullet.cpp" />
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
@@ -250,6 +252,7 @@
     <Image Include="DX_GITAE.ico" />
     <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Carina_Nebula.png" />
+    <Image Include="Resource\Enemy.png" />
     <Image Include="Resource\Gun.png" />
     <Image Include="Resource\Plane1.png" />
     <Image Include="small.ico" />

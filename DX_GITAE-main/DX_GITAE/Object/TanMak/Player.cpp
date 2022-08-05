@@ -6,6 +6,9 @@ Player::Player()
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
 	_sprite->GetTransform()->GetScale() = { 0.5f,0.5f };
 
+	_collider = make_shared<RectCollider>(_sprite->GetFrameHalfSize());
+	_collider->SetParent(_sprite->GetTransform());
+
 	SetGunPosition();
 
 	CreateActions();
@@ -37,11 +40,16 @@ void Player::Update()
 	}
 
 	_sprite->Update();
+	_collider->Update();
+
 	_gunParent1->UpdateWorld();
 	_gun1->Update();
 
 	_gunParent2->UpdateWorld();
 	_gun2->Update();
+
+	_gunParent3->UpdateWorld();
+	_gun3->Update();
 
 	for (auto& action : _actions)
 	{
@@ -58,15 +66,16 @@ void Player::Update()
 void Player::Render()
 {
 	_sprite->Render();
-	_gun1->Render();
-	_gun2->Render();
+	_collider->Render();
 
 	for (auto& bullet : _bullets)
 		bullet->Render();
+
 }
 
 void Player::PostRender()
 {
+	
 }
 
 void Player::CreateActions()
@@ -180,7 +189,20 @@ void Player::Fire()
 		{
 			bullet->_isActive = true;
 			bullet->GetTransform()->GetPos() = _gunParent2->GetWorldPos();
-			Vector2 dir = MOUSE_WORLD_POS - _gunParent2->GetWorldPos();
+			Vector2 dir = MOUSE_WORLD_POS - _gunParent2->GetWorldPos() * 1.1f;
+			dir.Normalize();
+			bullet->SetDirection(dir);
+			break;
+		}
+	}
+
+	for (auto& bullet : _bullets)
+	{
+		if (bullet->_isActive == false)
+		{
+			bullet->_isActive = true;
+			bullet->GetTransform()->GetPos() = _gunParent3->GetWorldPos();
+			Vector2 dir = MOUSE_WORLD_POS - _gunParent3->GetWorldPos() * 0.9f;
 			dir.Normalize();
 			bullet->SetDirection(dir);
 			break;
@@ -224,4 +246,9 @@ void Player::SetGunPosition()
 	_gun2->SetPlayer(_gunParent2);
 
 	_gunParent3 = make_shared<Transform>();
+	_gunParent3->SetParent(_sprite->GetTransform());
+	_gunParent3->GetPos().x = 60.0f;
+
+	_gun3 = make_shared<Gun>();
+	_gun3->SetPlayer(_gunParent3);
 }

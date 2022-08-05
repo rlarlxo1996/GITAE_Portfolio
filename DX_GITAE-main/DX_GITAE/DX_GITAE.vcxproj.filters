@@ -106,6 +106,7 @@
     <ClInclude Include="Scene\TanMakScene.h" />
     <ClInclude Include="Object\TanMak\Bullet.h" />
     <ClInclude Include="Object\TanMak\Gun.h" />
+    <ClInclude Include="Object\TanMak\Enemy.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -114,6 +115,7 @@
     <Image Include="Resource\Carina_Nebula.png" />
     <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Gun.png" />
+    <Image Include="Resource\Enemy.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -179,6 +181,7 @@
     <ClCompile Include="Scene\TanMakScene.cpp" />
     <ClCompile Include="Object\TanMak\Bullet.cpp" />
     <ClCompile Include="Object\TanMak\Gun.cpp" />
+    <ClCompile Include="Object\TanMak\Enemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

@@ -14,5 +14,7 @@ private:
 
 	shared_ptr<Player> _player;
 	shared_ptr<Transform> _playerFollow;
+
+	shared_ptr<Enemy> _enemy;
 };
 
