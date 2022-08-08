@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Object\TanMak\Object.h" />
     <ClInclude Include="Object\TanMak\Enemy.h" />
     <ClInclude Include="Object\TanMak\Gun.h" />
     <ClInclude Include="Object\TanMak\Bullet.h" />
@@ -199,6 +200,7 @@
     <ClInclude Include="TypeDef.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Object\TanMak\Object.cpp" />
     <ClCompile Include="Object\TanMak\Enemy.cpp" />
     <ClCompile Include="Object\TanMak\Gun.cpp" />
     <ClCompile Include="Object\TanMak\Bullet.cpp" />

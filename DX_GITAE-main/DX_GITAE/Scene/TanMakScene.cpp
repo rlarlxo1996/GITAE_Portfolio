@@ -38,14 +38,14 @@ void TanMakScene::Update()
 
 	for (auto& bullet : _player->GetBullet())
 	{
-		if (bullet->GetCollider()->IsCollision(_enemy->GetCollider()))
+		if (bullet->GetCollider()->IsCollision(_enemy->GetCollider()) && bullet->_isActive == true)
 		{
-			_enemy->GetCollider()->SetColorRed();
+			bullet->_isActive = false;
+			_enemy->Damaged(_player->GetAttack());
 			break;
 		}
 		else
 		{
-			_enemy->GetCollider()->SetColorGreen();
 		}
 	}
 }

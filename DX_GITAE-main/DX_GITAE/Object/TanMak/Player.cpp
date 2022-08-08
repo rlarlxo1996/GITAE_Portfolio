@@ -3,6 +3,9 @@
 
 Player::Player()
 {
+	_hp = 10;
+	_attack = 1;
+
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
 	_sprite->GetTransform()->GetScale() = { 0.5f,0.5f };
 
@@ -22,6 +25,12 @@ Player::Player()
 
 		_bullets.emplace_back(bullet);
 	}
+}
+
+Player::Player(int hp, int attack)
+{
+	_hp = hp;
+	_attack = attack;
 }
 
 Player::~Player()
@@ -251,4 +260,8 @@ void Player::SetGunPosition()
 
 	_gun3 = make_shared<Gun>();
 	_gun3->SetPlayer(_gunParent3);
+}
+
+void Player::Attack(shared_ptr<Object> object)
+{
 }

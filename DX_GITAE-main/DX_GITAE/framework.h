@@ -108,6 +108,7 @@ using namespace std;
 #include "Object/BasicObject/EffectManager.h"
 
 // TanMak
+#include "Object/TanMak/Object.h"
 #include "Object/TanMak/Player.h"
 #include "Object/TanMak/Bullet.h"
 #include "Object/TanMak/Gun.h"

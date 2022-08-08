@@ -14,6 +14,7 @@ public:
 	void SetDirection(const Vector2& direction);
 
 	bool _isActive = false;
+	int _attack = 1;
 private:
 	shared_ptr<Quad> _quad;
 	shared_ptr<Collider> _col;

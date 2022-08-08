@@ -1,5 +1,5 @@
 #pragma once
-class Player
+class Player : public Object
 {
 public:
 	enum State
@@ -10,6 +10,7 @@ public:
 	};
 
 	Player();
+	Player(int hp, int attack);
 	~Player();
 
 	void Update();
@@ -52,5 +53,7 @@ private:
 	float _speed = 350.0f;
 	float _time = 0.0f;
 	float _maxTime = 0.4f;
+
+	virtual void Attack(shared_ptr<Object> object) override;
 };
 
