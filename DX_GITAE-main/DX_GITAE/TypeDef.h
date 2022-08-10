@@ -34,6 +34,8 @@
 #define ADD_VS(k) ShaderManager::GetInstance()->AddVS(k)
 #define ADD_PS(k) ShaderManager::GetInstance()->AddPS(k)
 
+#define SOUND Audio::GetInstance()
+
 #define LERP(s,e,t) s + (e - s) * t
 
 #define V(hr) assert(SUCCEEDED(hr))

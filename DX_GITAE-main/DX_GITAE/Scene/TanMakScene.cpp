@@ -17,6 +17,9 @@ TanMakScene::TanMakScene()
 	Camera::GetInstance()->SetTarget(_playerFollow);
 	Camera::GetInstance()->SetLeftBottom({ 0, 0 });
 	Camera::GetInstance()->SetRightTop({ _backGround->GetSize().x, _backGround->GetSize().y });
+
+	SOUND->Add("bgm", "Resource/Sound/drumloop.wav", true);
+	SOUND->Play("bgm");
 }
 
 TanMakScene::~TanMakScene()

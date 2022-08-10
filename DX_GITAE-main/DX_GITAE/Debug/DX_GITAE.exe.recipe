@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\DX_GITAE.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\ActionShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\ButtonPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\ColliderPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\ColliderVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\FilterShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\InstancingPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\InstancingVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\ReversePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\SpriteShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\TexturePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\TextureVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\TutorialShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

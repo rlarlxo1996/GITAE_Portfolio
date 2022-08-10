@@ -59,6 +59,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     DirectWrite::Create();
     EffectManager::Create();
     Camera::Create();
+    Audio::Create();
 
     srand(static_cast<UINT>(time(nullptr)));
 
@@ -85,6 +86,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     }
 
     // 삭제
+    Audio::Delete();
     StateManager::Delete();
     ShaderManager::Delete();
     InputManager::Delete();

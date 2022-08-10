@@ -108,6 +108,7 @@
     <ClInclude Include="Object\TanMak\Gun.h" />
     <ClInclude Include="Object\TanMak\Enemy.h" />
     <ClInclude Include="Object\TanMak\Object.h" />
+    <ClInclude Include="Framework\Utility\Audio.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -184,6 +185,7 @@
     <ClCompile Include="Object\TanMak\Gun.cpp" />
     <ClCompile Include="Object\TanMak\Enemy.cpp" />
     <ClCompile Include="Object\TanMak\Object.cpp" />
+    <ClCompile Include="Framework\Utility\Audio.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -205,5 +207,12 @@
     <FxCompile Include="Shader\FilterShader\FilterShader.hlsl" />
     <FxCompile Include="Shader\ReversePixelShader.hlsl" />
     <FxCompile Include="Shader\ButtonPixelShader.hlsl" />
+    <FxCompile Include="Shader\InstancingPixelShader.hlsl" />
+    <FxCompile Include="Shader\InstancingVertexShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resource\Sound\attack.wav" />
+    <Media Include="Resource\Sound\drumloop.wav" />
+    <Media Include="Resource\Sound\jump.wav" />
   </ItemGroup>
 </Project>
