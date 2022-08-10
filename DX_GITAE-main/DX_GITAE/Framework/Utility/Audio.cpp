@@ -74,6 +74,23 @@ void Audio::Resume(string key)
     _soundMap[key]->_channel->setPaused(false);
 }
 
+void Audio::SetVolume(string key, float volume)
+{
+    if (_soundMap.count(key) == 0)
+        return;
+
+    if (_soundMap[key]->_channel == nullptr)
+        return;
+
+    if (volume <= 0)
+        volume = 0;
+
+    if (volume >= 2.0f)
+        volume = 2.0f;
+
+    _soundMap[key]->_channel->setVolume(volume);
+}
+
 bool Audio::IsPlaySound(string key)
 {
     if (_soundMap.count(key) == 0)

@@ -41,6 +41,7 @@ public:
 	void Stop(string key);
 	void Pause(string key);
 	void Resume(string key);
+	void SetVolume(string key, float volume);
 
 	bool IsPlaySound(string key);
 
