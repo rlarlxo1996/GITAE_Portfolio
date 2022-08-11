@@ -11,10 +11,11 @@ TanMakScene::TanMakScene()
 
 	_enemy = make_shared<Enemy>();
 	
-	_playerFollow = make_shared<Transform>();
-	_playerFollow->GetPos() = _player->GetTransform()->GetPos();
+	_cameraFollow = make_shared<Transform>();
+	_cameraFollow->GetPos() = CENTER;
+	
 
-	Camera::GetInstance()->SetTarget(_playerFollow);
+	Camera::GetInstance()->SetTarget(_cameraFollow);
 	Camera::GetInstance()->SetLeftBottom({ 0, 0 });
 	Camera::GetInstance()->SetRightTop({ _backGround->GetSize().x, _backGround->GetSize().y });
 
@@ -28,16 +29,25 @@ TanMakScene::~TanMakScene()
 
 void TanMakScene::Update()
 {
+	if (_player->_isActive == true)
+	{
+		_cameraFollow->GetPos().y += DELTA_TIME * 50;
+	}
+	else
+	{
+		return;
+	}
+
 	_backGround->Update();
 
 	_player->Update();
 
 	_enemy->Update();
 
-	float distance = _player->GetTransform()->GetPos().Distance(_playerFollow->GetPos());
+	//float distance = _player->GetTransform()->GetPos().Distance(_playerFollow->GetPos());
 
-	if (distance >= 10.0f)
-		_playerFollow->GetPos() = LERP(_playerFollow->GetPos(), _player->GetTransform()->GetPos(), DELTA_TIME * 5);
+	//if (distance >= 10.0f)
+	//	_playerFollow->GetPos() = LERP(_playerFollow->GetPos(), _player->GetTransform()->GetPos(), DELTA_TIME * 5);
 
 	for (auto& bullet : _player->GetBullet())
 	{
@@ -45,10 +55,12 @@ void TanMakScene::Update()
 		{
 			bullet->_isActive = false;
 			_enemy->Damaged(_player->GetAttack());
+
+			if (_enemy->_isActive == false)
+			{
+				_enemy->GetCollider()->_isActive = false;
+			}
 			break;
-		}
-		else
-		{
 		}
 	}
 }

@@ -1,10 +1,216 @@
-﻿  TanMakScene.cpp
-C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Scene\TanMakScene.cpp(40,29): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  framework.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Utility\Utility.h(9,20): warning C4244: '인수': '_Elem'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=wchar_t
+          ]
+          and
+          [
+              _Elem=char
+          ]
+  DX_GITAE.cpp
+  Action.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Animation\Action.cpp(21,21): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Camera.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(54,13): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(55,14): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(65,70): warning C4244: '인수': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(65,60): warning C4244: '인수': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(84,25): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(85,43): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(105,49): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(108,49): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(111,49): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(114,49): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(134,25): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
           with
           [
               _Ty=Transform
           ]
-C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Scene\TanMakScene.cpp(14): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(8): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=MatrixBuffer
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.cpp(10): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<MatrixBuffer> std::make_shared<MatrixBuffer,>(void)'에 대한 참조를 확인하세요.
+  CircleCollider.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Collider\CircleCollider.cpp(21,27): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  Collider.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=Transform
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Collider\Collider.cpp(21): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+  RectCollider.cpp
+  Device.cpp
+  Transform.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=MatrixBuffer
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Math\Transform.cpp(6): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<MatrixBuffer> std::make_shared<MatrixBuffer,>(void)'에 대한 참조를 확인하세요.
+  Vector2.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Math\Vector2.cpp(135,26): warning C4244: 'return': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ConstantBuffer.cpp
+  IndexBuffer.cpp
+  PixelShader.cpp
+  SRV.cpp
+  Shader.cpp
+  ShaderManager.cpp
+  Texture.cpp
+  VertexBuffer.cpp
+  VertexShader.cpp
+  BlendState.cpp
+  SamplerState.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  StateManager.cpp
+  Audio.cpp
+  BinaryReader.cpp
+  BinaryWriter.cpp
+  DirectWrite.cpp
+  InputManager.cpp
+  MathUtility.cpp
+  Timer.cpp
+  tinyxml2.cpp
+  Effect.cpp
+  EffectManager.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\EffectManager.cpp(25,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Quad.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=Transform
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Quad.cpp(21): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::_Emplace_back_with_unused_capacity<_Ty,float&,int,int>(_Ty &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Quad.cpp(58): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::emplace_back<float,float&,int,int>(float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+  Sprite.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Sprite.cpp(85,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Sprite.cpp(86,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=Transform
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Sprite.cpp(25): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::_Emplace_back_with_unused_capacity<_Ty,float&,int,int>(_Ty &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\Sprite.cpp(53): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::emplace_back<float,float&,int,int>(float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+  Bullet.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Bullet.cpp(22,24): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Bullet.cpp(31,59): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Enemy.cpp
+  Gun.cpp
+  Object.cpp
+  Player.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(21,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(44,21): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(151,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(158,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(165,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(172,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::_Emplace_back_with_unused_capacity<_Ty,int,float&,float&,std::shared_ptr<Texture>&>(_Ty &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(99): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::emplace_back<float,int,float&,float&,std::shared_ptr<Texture>&>(float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747,1): warning C4316: 'std::_Ref_count_obj2<_Ty>': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+          with
+          [
+              _Ty=Transform
+          ]
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\TanMak\Player.cpp(244): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Transform> std::make_shared<Transform,>(void)'에 대한 참조를 확인하세요.
+  Program.cpp
+  Scene.cpp
+  코드를 생성하고 있습니다...
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Object\BasicObject\EffectManager.h(21): warning C4715: 'EffectManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
 C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
-  DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\DX_GITAE.exe
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Utility\DirectWrite.h(59): warning C4715: 'DirectWrite::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  TanMakScene.cpp
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\DX_GITAE\Scene\TanMakScene.cpp(41,29): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+Audio.obj : error LNK2019: _FMOD_System_Create@4"enum FMOD_RESULT __cdecl FMOD::System_Create(class FMOD::System * *)" (?System_Create@FMOD@@YA?AW4FMOD_RESULT@@PAPAVSystem@1@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::System::release(void)" (?release@System@FMOD@@QAG?AW4FMOD_RESULT@@XZ)"private: __thiscall Audio::~Audio(void)" (??1Audio@@AAE@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::System::init(int,unsigned int,void *)" (?init@System@FMOD@@QAG?AW4FMOD_RESULT@@HIPAX@Z)"private: __thiscall Audio::Audio(void)" (??0Audio@@AAE@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::System::update(void)" (?update@System@FMOD@@QAG?AW4FMOD_RESULT@@XZ)"public: void __thiscall Audio::Update(void)" (?Update@Audio@@QAEXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::System::createStream(char const *,unsigned int,struct FMOD_CREATESOUNDEXINFO *,class FMOD::Sound * *)" (?createStream@System@FMOD@@QAG?AW4FMOD_RESULT@@PBDIPAUFMOD_CREATESOUNDEXINFO@@PAPAVSound@2@@Z)"public: void __thiscall Audio::Add(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?Add@Audio@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_N@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::System::playSound(class FMOD::Sound *,class FMOD::ChannelGroup *,bool,class FMOD::Channel * *)" (?playSound@System@FMOD@@QAG?AW4FMOD_RESULT@@PAVSound@2@PAVChannelGroup@2@_NPAPAVChannel@2@@Z)"public: void __thiscall Audio::Play(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,float)" (?Play@Audio@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::Sound::release(void)" (?release@Sound@FMOD@@QAG?AW4FMOD_RESULT@@XZ)"public: __thiscall Audio::SoundInfo::~SoundInfo(void)" (??1SoundInfo@Audio@@QAE@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::ChannelControl::stop(void)" (?stop@ChannelControl@FMOD@@QAG?AW4FMOD_RESULT@@XZ)"public: void __thiscall Audio::Stop(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?Stop@Audio@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::ChannelControl::setPaused(bool)" (?setPaused@ChannelControl@FMOD@@QAG?AW4FMOD_RESULT@@_N@Z)"public: void __thiscall Audio::Pause(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?Pause@Audio@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::ChannelControl::setVolume(float)" (?setVolume@ChannelControl@FMOD@@QAG?AW4FMOD_RESULT@@M@Z)"public: void __thiscall Audio::Play(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,float)" (?Play@Audio@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Audio.obj : error LNK2019: "public: enum FMOD_RESULT __stdcall FMOD::ChannelControl::isPlaying(bool *)" (?isPlaying@ChannelControl@FMOD@@QAG?AW4FMOD_RESULT@@PA_N@Z)"public: bool __thiscall Audio::IsPlaySound(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?IsPlaySound@Audio@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Library\FMOD\fmod_vc.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\user\Desktop\김기태_DX_Portfolio\GITAE_Portfolio\DX_GITAE-main\Debug\DX_GITAE.exe : fatal error LNK1120: 11개의 확인할 수 없는 외부 참조입니다.

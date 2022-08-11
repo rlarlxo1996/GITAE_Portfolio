@@ -24,11 +24,17 @@ void Collider::CreateData()
 
 void Collider::Update()
 {
+	if (_isActive == false)
+		return;
+
 	_transform->UpdateWorld();
 }
 
 void Collider::Render()
 {
+	if (_isActive == false)
+		return;
+
 	_transform->SetBuffer(0);
 
 	_vertexBuffer->IASetVertexBuffer(0);
@@ -45,6 +51,9 @@ void Collider::Render()
 
 bool Collider::IsCollision(shared_ptr<Collider> col, bool isObb)
 {
+	if (_isActive == false || col->_isActive == false)
+		return false;
+
 	switch (col->_type)
 	{
 	case Collider::Type::DEFAULT:

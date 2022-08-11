@@ -18,7 +18,6 @@ public:
 	bool _isActive;
 
 protected:
-
 	int _hp;
 	int _attack;
 };
