@@ -144,32 +144,30 @@ void Player::SetIDLE()
 
 void Player::KeyBoardMove()
 {
-	SetPosition(_pos);
-
 	if (KEY_PRESS('W'))
 	{
-		_pos.y += _speed * DELTA_TIME;
+		_sprite->GetTransform()->GetPos().y += _speed * DELTA_TIME;
 		SetAnimation(Player::State::F_IDLE);
 		return;
 	}
 
 	if (KEY_PRESS('S'))
 	{
-		_pos.y -= _speed * DELTA_TIME;
+		_sprite->GetTransform()->GetPos().y -= _speed * DELTA_TIME;
 		SetAnimation(Player::State::F_IDLE);
 		return;
 	}
 
 	if (KEY_PRESS('A'))
 	{
-		_pos.x -= _speed * DELTA_TIME;
+		_sprite->GetTransform()->GetPos().x -= _speed * DELTA_TIME;
 		SetAnimation(Player::State::L_MOVE);
 		return;
 	}
 
 	if (KEY_PRESS('D'))
 	{
-		_pos.x += _speed * DELTA_TIME;
+		_sprite->GetTransform()->GetPos().x += _speed * DELTA_TIME;
 		SetAnimation(Player::State::R_MOVE);
 		return;
 	}

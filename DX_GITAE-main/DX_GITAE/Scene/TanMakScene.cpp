@@ -8,14 +8,10 @@ TanMakScene::TanMakScene()
 	_backGround->GetTransform()->GetPos().y += _backGround->GetHalfSize().y;
 
 	_player = make_shared<Player>();
+	_player->GetTransform()->GetPos() = CENTER;
 
 	_enemy = make_shared<Enemy>();
 	
-	_cameraFollow = make_shared<Transform>();
-	_cameraFollow->GetPos() = CENTER;
-	
-
-	Camera::GetInstance()->SetTarget(_cameraFollow);
 	Camera::GetInstance()->SetLeftBottom({ 0, 0 });
 	Camera::GetInstance()->SetRightTop({ _backGround->GetSize().x, _backGround->GetSize().y });
 
@@ -29,25 +25,11 @@ TanMakScene::~TanMakScene()
 
 void TanMakScene::Update()
 {
-	if (_player->_isActive == true)
-	{
-		_cameraFollow->GetPos().y += DELTA_TIME * 50;
-	}
-	else
-	{
-		return;
-	}
-
 	_backGround->Update();
 
 	_player->Update();
 
 	_enemy->Update();
-
-	//float distance = _player->GetTransform()->GetPos().Distance(_playerFollow->GetPos());
-
-	//if (distance >= 10.0f)
-	//	_playerFollow->GetPos() = LERP(_playerFollow->GetPos(), _player->GetTransform()->GetPos(), DELTA_TIME * 5);
 
 	for (auto& bullet : _player->GetBullet())
 	{
@@ -63,6 +45,8 @@ void TanMakScene::Update()
 			break;
 		}
 	}
+
+	MoveRestrict();
 }
 
 void TanMakScene::Render()
@@ -76,5 +60,22 @@ void TanMakScene::Render()
 
 void TanMakScene::PostRender()
 {
+	ImGui::Text("Player Info");
+	ImGui::Text("P.X : %0.1f, P.Y : %0.1f", _player->GetTransform()->GetPos().x, _player->GetTransform()->GetPos().y);
+}
+
+void TanMakScene::MoveRestrict()
+{
+	if (_player->GetTransform()->GetPos().x <= Camera::GetInstance()->GetMoveTransform()->GetPos().x + 45.0f)
+		_player->GetTransform()->GetPos().x = Camera::GetInstance()->GetMoveTransform()->GetPos().x + 45.0f;
+
+	else if (_player->GetTransform()->GetPos().x >= WIN_WIDTH)
+		_player->GetTransform()->GetPos().x = WIN_WIDTH;
+
+	else if (_player->GetTransform()->GetPos().y <= Camera::GetInstance()->GetMoveTransform()->GetPos().y + 25.0f)
+		_player->GetTransform()->GetPos().y = Camera::GetInstance()->GetMoveTransform()->GetPos().y + 25.0f;
+
+	else if (_player->GetTransform()->GetPos().y >= _backGround->GetSize().y)
+		_player->GetTransform()->GetPos().y = _backGround->GetSize().y;
 
 }

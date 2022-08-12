@@ -9,6 +9,7 @@ public:
 	virtual void Render() override;
 	virtual void PostRender() override;
 
+	void MoveRestrict();
 private:
 	shared_ptr<Quad> _backGround;
 
@@ -17,5 +18,6 @@ private:
 	shared_ptr<Transform> _cameraFollow;
 
 	shared_ptr<Enemy> _enemy;
+
 };
 

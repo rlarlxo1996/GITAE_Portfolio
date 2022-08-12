@@ -30,7 +30,6 @@ public:
 
 	void SetGunPosition();
 
-	Vector2 _pos = { CENTER.x, CENTER.y - 300 };
 private:
 	shared_ptr<Sprite> _sprite;
 	shared_ptr<Collider> _collider;
