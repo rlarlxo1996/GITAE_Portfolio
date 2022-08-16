@@ -8,7 +8,7 @@ TanMakScene::TanMakScene()
 	_backGround->GetTransform()->GetPos().y += _backGround->GetHalfSize().y;
 
 	_player = make_shared<Player>();
-	_player->GetTransform()->GetPos() = CENTER;
+	_player->GetTransform()->GetPos() = { CENTER.x , CENTER.y - 250 };
 
 	_enemy = make_shared<Enemy>();
 	
@@ -60,8 +60,8 @@ void TanMakScene::Render()
 
 void TanMakScene::PostRender()
 {
-	ImGui::Text("Player Info");
-	ImGui::Text("P.X : %0.1f, P.Y : %0.1f", _player->GetTransform()->GetPos().x, _player->GetTransform()->GetPos().y);
+	//ImGui::Text("Player Info");
+	//ImGui::Text("P.X : %0.1f, P.Y : %0.1f", _player->GetTransform()->GetPos().x, _player->GetTransform()->GetPos().y);
 }
 
 void TanMakScene::MoveRestrict()
@@ -69,13 +69,13 @@ void TanMakScene::MoveRestrict()
 	if (_player->GetTransform()->GetPos().x <= Camera::GetInstance()->GetMoveTransform()->GetPos().x + 45.0f)
 		_player->GetTransform()->GetPos().x = Camera::GetInstance()->GetMoveTransform()->GetPos().x + 45.0f;
 
-	else if (_player->GetTransform()->GetPos().x >= WIN_WIDTH)
-		_player->GetTransform()->GetPos().x = WIN_WIDTH;
+	if (_player->GetTransform()->GetPos().x >= WIN_WIDTH - 50)
+		_player->GetTransform()->GetPos().x = WIN_WIDTH - 50;
 
-	else if (_player->GetTransform()->GetPos().y <= Camera::GetInstance()->GetMoveTransform()->GetPos().y + 25.0f)
+	if (_player->GetTransform()->GetPos().y <= Camera::GetInstance()->GetMoveTransform()->GetPos().y + 25.0f)
 		_player->GetTransform()->GetPos().y = Camera::GetInstance()->GetMoveTransform()->GetPos().y + 25.0f;
 
-	else if (_player->GetTransform()->GetPos().y >= _backGround->GetSize().y)
+	if (_player->GetTransform()->GetPos().y >= _backGround->GetSize().y)
 		_player->GetTransform()->GetPos().y = _backGround->GetSize().y;
 
 }

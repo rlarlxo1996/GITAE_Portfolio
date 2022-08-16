@@ -118,6 +118,7 @@
     <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Gun.png" />
     <Image Include="Resource\Enemy.png" />
+    <Image Include="Resource\Tanmak.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />

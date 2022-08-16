@@ -35,8 +35,8 @@ void Camera::Update()
 
 void Camera::PostRender()
 {
-	ImGui::Text("Camera Info");
-	ImGui::Text("CamX : %0.1f, CamY : %0.1f", _moveTransform->GetPos().x, _moveTransform->GetPos().y);
+	//ImGui::Text("Camera Info");
+	//ImGui::Text("CamX : %0.1f, CamY : %0.1f", _moveTransform->GetPos().x, _moveTransform->GetPos().y);
 }
 
 void Camera::ShakeStart(float magnitude, float duration, float reduceDamping)
@@ -114,7 +114,7 @@ void Camera::FreeMode()
 			_transform->GetPos().x -= _speed * DELTA_TIME;
 	}
 
-	_transform->GetPos().y -= _speed * DELTA_TIME;
+	//_transform->GetPos().y -= _speed * DELTA_TIME;
 }
 
 void Camera::FollowMode()

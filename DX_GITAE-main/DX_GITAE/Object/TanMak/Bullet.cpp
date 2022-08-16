@@ -47,3 +47,9 @@ void Bullet::SetDirection(const Vector2& direction)
 	_direction = direction;
 	_quad->GetTransform()->GetAngle() = _direction.Angle();
 }
+
+void Bullet::SetAngleDirect(const float& angle)
+{
+	_angle = angle;
+	_quad->GetTransform()->GetAngle() = _direction.Angle();
+}

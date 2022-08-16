@@ -12,6 +12,7 @@ public:
 	shared_ptr<Collider>& GetCollider() { return _col; }
 
 	void SetDirection(const Vector2& direction);
+	void SetAngleDirect(const float& angle);
 
 	bool _isActive = false;
 	int _attack = 1;
@@ -23,5 +24,6 @@ private:
 	float _speed = 500.0f;
 	float _runTime = 0.0f;
 	float _delayTime = 3.0f;
+	float _angle = 0;
 };
 
