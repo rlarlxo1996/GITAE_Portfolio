@@ -13,6 +13,16 @@ Enemy::Enemy()
 	_collider = make_shared<RectCollider>(_quad->GetHalfSize() * 0.15f);
 	_collider->SetParent(_quad->GetTransform());
 
+	_gunParent = make_shared<Transform>();
+	_gunParent->SetParent(_quad->GetTransform());
+
+	_gun = make_shared<Gun>();
+	_gun->SetPlayer(_gunParent);
+
+	_aim = make_shared<Gun>();
+	_aim->SetPlayer(_gunParent);
+	_aim->GetTransform()->GetPos().x += 300.0f;
+
 	for (int i = 0; i < _poolCount; i++)
 	{
 		shared_ptr<Bullet> bullet = make_shared<Bullet>();
@@ -37,6 +47,7 @@ void Enemy::Update()
 	if (_isActive == false)
 		return;
 
+	_gunParent->GetAngle() += DELTA_TIME;
 	_time += DELTA_TIME;
 	if (_time >= _maxTime)
 	{
@@ -44,8 +55,13 @@ void Enemy::Update()
 		Fire();
 	}
 
+
 	_quad->Update();
 	_collider->Update();
+
+	_gunParent->UpdateWorld();
+	_gun->Update();
+	_aim->Update();
 
 	for (auto& bullet : _bullets)
 		bullet->Update();
@@ -59,6 +75,8 @@ void Enemy::Render()
 	_quad->Render();
 	_collider->Render();
 
+	_gun->Render();
+
 	for (auto& bullet : _bullets)
 		bullet->Render();
 }
@@ -70,11 +88,10 @@ void Enemy::Fire()
 		if (bullet->_isActive == false)
 		{
 			bullet->_isActive = true;
-			bullet->GetTransform()->GetPos() = _quad->GetTransform()->GetWorldPos();
-			bullet->SetAngleDirect(_quad->GetTransform()->GetAngle());
-			//Vector2 dir = (_player->GetTransform()->GetWorldPos() - _quad->GetTransform()->GetWorldPos());
-			//dir.Normalize();
-			//bullet->SetDirection(dir);
+			bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
+			Vector2 dir = _aim->GetTransform()->GetWorldPos() - _gunParent->GetWorldPos();
+			dir.Normalize();
+			bullet->SetDirection(dir);
 			break;
 		}
 	}
