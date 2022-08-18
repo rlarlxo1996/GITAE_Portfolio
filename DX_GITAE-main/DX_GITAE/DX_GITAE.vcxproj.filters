@@ -103,12 +103,15 @@
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Object\TanMak\Player.h" />
-    <ClInclude Include="Scene\TanMakScene.h" />
+    <ClInclude Include="Scene\GameScene\TanMakScene.h" />
     <ClInclude Include="Object\TanMak\Bullet.h" />
     <ClInclude Include="Object\TanMak\Gun.h" />
     <ClInclude Include="Object\TanMak\Enemy.h" />
     <ClInclude Include="Object\TanMak\Object.h" />
     <ClInclude Include="Framework\Utility\Audio.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
+    <ClInclude Include="Scene\GameScene\StartScene.h" />
+    <ClInclude Include="Object\UI\Button.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -119,6 +122,7 @@
     <Image Include="Resource\Gun.png" />
     <Image Include="Resource\Enemy.png" />
     <Image Include="Resource\Tanmak.png" />
+    <Image Include="Resource\UI\Button.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -181,12 +185,15 @@
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Object\TanMak\Player.cpp" />
-    <ClCompile Include="Scene\TanMakScene.cpp" />
+    <ClCompile Include="Scene\GameScene\TanMakScene.cpp" />
     <ClCompile Include="Object\TanMak\Bullet.cpp" />
     <ClCompile Include="Object\TanMak\Gun.cpp" />
     <ClCompile Include="Object\TanMak\Enemy.cpp" />
     <ClCompile Include="Object\TanMak\Object.cpp" />
     <ClCompile Include="Framework\Utility\Audio.cpp" />
+    <ClCompile Include="Scene\SceneManager.cpp" />
+    <ClCompile Include="Scene\GameScene\StartScene.cpp" />
+    <ClCompile Include="Object\UI\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

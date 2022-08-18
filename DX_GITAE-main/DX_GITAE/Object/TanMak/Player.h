@@ -17,6 +17,8 @@ public:
 	void Render();
 	void PostRender();
 
+	void Init();
+
 	void CreateActions();
 	void SetIDLE();
 	void KeyBoardMove();

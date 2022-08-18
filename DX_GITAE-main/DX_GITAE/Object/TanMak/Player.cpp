@@ -3,7 +3,7 @@
 
 Player::Player()
 {
-	_hp = 10;
+	_hp = 3;
 	_attack = 1;
 
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
@@ -39,6 +39,9 @@ Player::~Player()
 
 void Player::Update()
 {
+	if (_isActive == false)
+		return;
+
 	KeyBoardMove();
 
 	_time += DELTA_TIME;
@@ -74,6 +77,9 @@ void Player::Update()
 
 void Player::Render()
 {
+	if (_isActive == false)
+		return;
+
 	_sprite->Render();
 	_collider->Render();
 
@@ -85,6 +91,14 @@ void Player::Render()
 void Player::PostRender()
 {
 	
+}
+
+void Player::Init()
+{
+	_sprite->GetTransform()->GetPos() = { CENTER.x , CENTER.y - 250 };
+
+	for (auto& bullet : _bullets)
+		bullet->_isActive = false;
 }
 
 void Player::CreateActions()

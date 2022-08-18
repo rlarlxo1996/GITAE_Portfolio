@@ -1,11 +1,9 @@
 #include "framework.h"
 #include "Program.h"
 
-#include "../Scene/TanMakScene.h"
-
 Program::Program()
 {
-	_scene = make_shared<TanMakScene>();
+	SCENE->SetCurSence("Lobby");
 }
 
 Program::~Program()
@@ -14,7 +12,7 @@ Program::~Program()
 
 void Program::Update()
 {
-	_scene->Update();
+	SCENE->Update();
 	EffectManager::GetInstance()->Update();
 	Camera::GetInstance()->Update();
 }
@@ -32,9 +30,9 @@ void Program::Render()
 
 	ALPHA_STATE->SetState();
 
-	_scene->PreRender();
+	SCENE->PreRender();
 
-	_scene->Render();
+	SCENE->Render();
 	EffectManager::GetInstance()->Render();
 
 	wstring fps = L"FPS : " + to_wstring((int)Timer::GetInstance()->GetFPS());
@@ -43,7 +41,7 @@ void Program::Render()
 	DirectWrite::GetInstance()->GetDC()->BeginDraw();
 	DirectWrite::GetInstance()->RenderText(fps, rect);
 
-	_scene->PostRender();
+	SCENE->PostRender();
 	Camera::GetInstance()->PostRender();
 
 	ImGui::Render();

@@ -10,6 +10,8 @@ public:
 	virtual void PreRender() {}
 	virtual void PostRender() {}
 
+	virtual void Init() {}
+
 private:
 };
 

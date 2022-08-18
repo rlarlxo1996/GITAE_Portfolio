@@ -13,6 +13,7 @@ public:
 
 	shared_ptr<Collider> GetCollider() { return _collider; }
 	shared_ptr<Transform> GetTransform() { return _quad->GetTransform(); }
+	vector<shared_ptr<class Bullet>>& GetBullet() { return _bullets; }
 
 private:
 	shared_ptr<Quad> _quad;

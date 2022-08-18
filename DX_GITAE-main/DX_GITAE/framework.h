@@ -118,9 +118,11 @@ using namespace std;
 #include "Object/TanMak/Bullet.h"
 #include "Object/TanMak/Gun.h"
 #include "Object/TanMak/Enemy.h"
+#include "Object/UI/Button.h"
 
 // Scene
 #include "Scene/Scene.h"
+#include "Scene/SceneManager.h"
 
 // Program
 #include "Program/Program.h"

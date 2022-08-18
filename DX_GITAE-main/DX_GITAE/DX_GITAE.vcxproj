@@ -189,14 +189,17 @@
     <ClInclude Include="Framework\Utility\InputManager.h" />
     <ClInclude Include="Framework\Utility\Timer.h" />
     <ClInclude Include="Object\TanMak\Player.h" />
+    <ClInclude Include="Object\UI\Button.h" />
     <ClInclude Include="Program\Program.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Framework\State\StateManager.h" />
     <ClInclude Include="Framework\Render\ShaderManager.h" />
     <ClInclude Include="Framework\Render\Shader.h" />
     <ClInclude Include="Object\BasicObject\Sprite.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Scene\Scene.h" />
-    <ClInclude Include="Scene\TanMakScene.h" />
+    <ClInclude Include="Scene\GameScene\TanMakScene.h" />
+    <ClInclude Include="Scene\GameScene\StartScene.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Framework\Math\Transform.h" />
     <ClInclude Include="Framework\Render\Texture.h" />
@@ -241,6 +244,7 @@
     <ClCompile Include="Framework\Utility\InputManager.cpp" />
     <ClCompile Include="Framework\Utility\Timer.cpp" />
     <ClCompile Include="Object\TanMak\Player.cpp" />
+    <ClCompile Include="Object\UI\Button.cpp" />
     <ClCompile Include="Program\Program.cpp" />
     <ClCompile Include="Framework\State\StateManager.cpp" />
     <ClCompile Include="Framework\Math\Transform.cpp" />
@@ -248,8 +252,10 @@
     <ClCompile Include="Framework\Render\Shader.cpp" />
     <ClCompile Include="Framework\Render\Texture.cpp" />
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
+    <ClCompile Include="Scene\SceneManager.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
-    <ClCompile Include="Scene\TanMakScene.cpp" />
+    <ClCompile Include="Scene\GameScene\TanMakScene.cpp" />
+    <ClCompile Include="Scene\GameScene\StartScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -262,6 +268,7 @@
     <Image Include="Resource\Gun.png" />
     <Image Include="Resource\Plane1.png" />
     <Image Include="Resource\Tanmak.png" />
+    <Image Include="Resource\UI\Button.png" />
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>

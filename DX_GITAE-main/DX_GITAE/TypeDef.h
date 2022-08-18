@@ -36,6 +36,8 @@
 
 #define SOUND Audio::GetInstance()
 
+#define SCENE SceneManager::GetInstance()
+
 #define LERP(s,e,t) s + (e - s) * t
 
 #define V(hr) assert(SUCCEEDED(hr))
