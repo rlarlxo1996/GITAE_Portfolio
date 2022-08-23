@@ -234,7 +234,7 @@ void Player::Fire()
 void Player::SetAnimation(Player::State state)
 {
 	if (_actions[state]->IsPlay() &&
-		(_actions[state]->GetReapeatTyoe() == Action::LOOP || _actions[state]->GetReapeatTyoe() == Action::PINGPONG))
+		(_actions[state]->GetRepeatType() == Action::LOOP || _actions[state]->GetRepeatType() == Action::PINGPONG))
 		return;
 
 	for (auto& action : _actions)

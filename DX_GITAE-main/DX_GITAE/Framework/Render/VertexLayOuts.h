@@ -3,7 +3,7 @@
 struct VertexPos
 {
     VertexPos()
-        : pos(0,0,0)
+    : pos(0,0,0)
     {
 
     }

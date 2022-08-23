@@ -2,7 +2,7 @@
 #include "RectCollider.h"
 
 RectCollider::RectCollider(const Vector2& halfSize)
-	: _halfSize(halfSize)
+: _halfSize(halfSize)
 {
 	_type = Collider::Type::RECT;
 	_vertices.reserve(5);

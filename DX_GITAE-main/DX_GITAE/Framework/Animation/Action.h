@@ -37,7 +37,7 @@ public:
 	void SetEndEvent(CallBack event) { _endEvent = event; }
 
 	Clip GetCurClip() { return _clips[_curClipNum]; }
-	Action::Type GetReapeatTyoe() { return _repeatType; }
+	Action::Type GetRepeatType() { return _repeatType; }
 
 	bool IsPlay() { return _isPlay; }
 
@@ -48,7 +48,7 @@ private:
 	Type _repeatType;
 	bool _isPlay = true;
 
-	UINT _curClipNum = 0; // clips¿« ¿Œµ¶Ω∫
+	UINT _curClipNum = 0; // _clips¿« ¿Œµ¶Ω∫
 
 	float _time = 0.0f;
 	float _speed = 0.0f;

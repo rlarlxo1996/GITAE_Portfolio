@@ -16,7 +16,7 @@ BinaryReader::~BinaryReader()
 int BinaryReader::Int()
 {
     int temp;
-    assert(ReadFile(_file, OUT &temp, sizeof(int), OUT &_size, nullptr));
+    assert(ReadFile(_file, OUT &temp, sizeof(int), OUT & _size, nullptr));
     // assert(0) => 프로그램 중지, 어디서 에러났는지 표시
 
     return temp;
@@ -25,7 +25,7 @@ int BinaryReader::Int()
 UINT BinaryReader::Uint()
 {
     UINT temp;
-    assert(ReadFile(_file, OUT &temp, sizeof(UINT), OUT &_size, nullptr));
+    assert(ReadFile(_file, OUT & temp, sizeof(UINT), OUT & _size, nullptr));
     // assert(0) => 프로그램 중지, 어디서 에러났는지 표시
 
     return temp;
@@ -34,7 +34,7 @@ UINT BinaryReader::Uint()
 float BinaryReader::Float()
 {
     float temp;
-    assert(ReadFile(_file, OUT &temp, sizeof(float), OUT &_size, nullptr));
+    assert(ReadFile(_file, OUT & temp, sizeof(float), OUT & _size, nullptr));
     // assert(0) => 프로그램 중지, 어디서 에러났는지 표시
 
     return temp;
@@ -45,7 +45,7 @@ string BinaryReader::String()
     UINT size = Uint();
 
     char* temp = new char[size + 1];
-    assert(ReadFile(_file, OUT temp, sizeof(char) * size, OUT &_size, nullptr));
+    assert(ReadFile(_file, OUT temp, sizeof(char) * size, OUT & _size, nullptr));
 
     return static_cast<string>(temp);
 }

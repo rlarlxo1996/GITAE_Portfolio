@@ -12,8 +12,6 @@ StateManager::StateManager()
 
 	_additiveState = make_shared<BlendState>();
 	_additiveState->Additive();
-
-	_blendState = make_shared<BlendState>();
 }
 
 StateManager::~StateManager()

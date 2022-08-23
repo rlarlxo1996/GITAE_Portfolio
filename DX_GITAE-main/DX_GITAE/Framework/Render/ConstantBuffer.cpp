@@ -7,10 +7,10 @@ ConstantBuffer::ConstantBuffer(void* data, UINT dataSize)
 {
     D3D11_BUFFER_DESC bd = {};
     bd.Usage = D3D11_USAGE_DYNAMIC;
-    // D3D11_USAGE_DEFAULT // GPU에서 읽고 쓰기 가능
-    // D3D11_USAGE_IMMUTABLE // GPU에서 읽기만 가능
-    // D3D11_USAGE_DYNAMIC // CPU에서 쓰기 가능, GPU에서 일기
-    // D3D11_USAGE_STAAGING // GPU에서 CPU로 이동(읽기만 가능)
+    // D3D11_USAGE_DEFALUT // GPU에서만 읽고 쓰기 가능
+    // D3D11_USAGE_IMMUTABLE // GPU에서만 읽기만 가능
+    // D3D11_USAGE_DYNAMIC // CPU에서 쓰기 가능, GPU에서 읽기
+    // D3D11_USAGE_STAGING // GPU에서 CPU로 이동(읽기만 가능)
     bd.ByteWidth = dataSize;
     bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
     bd.CPUAccessFlags = D3D10_CPU_ACCESS_WRITE;

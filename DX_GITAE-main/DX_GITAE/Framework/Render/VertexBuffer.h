@@ -11,8 +11,12 @@ public:
 	void IASetVertexBuffer(int slot);
 
 private:
-	Microsoft::WRL::ComPtr<ID3D11Buffer> _vertexBuffer;
+	void Update();
 
+	Microsoft::WRL::ComPtr<ID3D11Buffer> _vertexBuffer;
+	D3D11_MAPPED_SUBRESOURCE _subResource;
+
+	void* _data;
 	UINT _stride = 0;
 	UINT _count = 0;
 	UINT _offset = 0;

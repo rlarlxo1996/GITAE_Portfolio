@@ -3,7 +3,6 @@
 
 Program::Program()
 {
-	SCENE->SetCurSence("Lobby");
 }
 
 Program::~Program()

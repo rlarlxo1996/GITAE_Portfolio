@@ -5,7 +5,7 @@ CircleCollider::CircleCollider(const float& radius)
 : _radius(radius)
 {
 	_type = Collider::Type::CIRCLE;
-	_vertices.reserve(5);
+	_vertices.reserve(37);
 
 	CreateVertices();
 }
@@ -27,9 +27,9 @@ void CircleCollider::CreateVertices()
 		v.pos.z = 0;
 		_vertices.push_back(v);
 	}
-	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size()); \
+	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size());
 
-		Collider::CreateData();
+	Collider::CreateData();
 }
 
 void CircleCollider::Update()
@@ -44,7 +44,10 @@ void CircleCollider::Render()
 
 bool CircleCollider::IsCollision(const Vector2& pos)
 {
-	return (pos - GetWorldPos()).Length() < GetRadius();
+	float distance = pos.Distance(GetWorldPos());
+	float radius = GetRadius();
+
+    return distance < radius;
 }
 
 bool CircleCollider::IsCollision(shared_ptr<CircleCollider> other, bool isObb)

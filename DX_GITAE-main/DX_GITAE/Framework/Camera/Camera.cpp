@@ -30,7 +30,7 @@ void Camera::Update()
 	_moveTransform->GetPos().x = -_transform->GetPos().x;
 	_moveTransform->GetPos().y = -_transform->GetPos().y;
 
-	_transform->SetBuffer(1);
+	//_transform->SetBuffer(1);
 }
 
 void Camera::PostRender()

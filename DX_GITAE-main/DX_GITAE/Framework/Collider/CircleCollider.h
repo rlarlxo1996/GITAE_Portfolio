@@ -13,7 +13,7 @@ public:
 	float GetRadius() { return _radius * _transform->GetWorldScale().x; }
 
 	virtual bool IsCollision(const Vector2& pos) override;
-	virtual bool IsCollision(shared_ptr <CircleCollider> other, bool isObb= false) override;
+	virtual bool IsCollision(shared_ptr<CircleCollider> other, bool isObb = false) override;
 	virtual bool IsCollision(shared_ptr<class RectCollider> rect, bool isObb = false) override;
 
 private:

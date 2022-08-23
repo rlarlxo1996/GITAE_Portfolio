@@ -10,5 +10,5 @@ int MathUtility::RandomInt(int min, int max)
 float MathUtility::RandomFloat(float min, float max)
 {
     float zeroToOne = (float)(rand()) / (float)(RAND_MAX);
-    return zeroToOne;
+    return zeroToOne * (max - min) + min;
 }

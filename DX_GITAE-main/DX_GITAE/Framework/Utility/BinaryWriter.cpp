@@ -24,7 +24,7 @@ void BinaryWriter::Uint(UINT data)
 
 void BinaryWriter::Float(float data)
 {
-	WriteFile(_file, &data, sizeof(float), OUT & _size, nullptr);
+	WriteFile(_file, &data, sizeof(float), OUT &_size, nullptr);
 }
 
 void BinaryWriter::String(string data)
@@ -37,5 +37,5 @@ void BinaryWriter::String(string data)
 
 void BinaryWriter::Byte(void* data, UINT dataSize)
 {
-	WriteFile(_file, data, dataSize, OUT & _size, nullptr);
+	WriteFile(_file, data, dataSize,OUT &_size, nullptr);
 }

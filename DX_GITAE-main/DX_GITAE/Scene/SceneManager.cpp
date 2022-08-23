@@ -10,6 +10,8 @@ SceneManager::SceneManager()
 {
 	_sceneTable["Lobby"] = make_shared<StartScene>();
 	_sceneTable["TanMak"] = make_shared<TanMakScene>();
+
+	SetCurSence("Lobby");
 }
 
 SceneManager::~SceneManager()

@@ -2,11 +2,11 @@
 
 class Audio
 {
-public:
+private:
 	struct SoundInfo
 	{
-		FMOD::Sound* _sound = nullptr;
-		FMOD::Channel* _channel = nullptr;
+		FMOD::Sound*		 _sound = nullptr;
+		FMOD::Channel*		 _channel = nullptr;
 
 		SoundInfo() {}
 		~SoundInfo()
@@ -15,6 +15,7 @@ public:
 		}
 	};
 
+public:
 	static void Create()
 	{
 		if (_instance == nullptr)

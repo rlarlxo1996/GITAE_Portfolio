@@ -4,7 +4,7 @@
 Device* Device::_instance = nullptr;
 
 Device::Device(HWND hWnd)
-    : _hWnd(hWnd)
+: _hWnd(hWnd)
 {
     CreateDeviceAndSwapChain();
     CreateBackBuffer();
@@ -61,6 +61,11 @@ void Device::CreateBackBuffer()
     _swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)backBuffer.GetAddressOf());
     _device->CreateRenderTargetView(backBuffer.Get(), nullptr, _renderTargetView.GetAddressOf());
 
+    _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
+}
+
+void Device::SetRTV()
+{
     _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
 }
 
