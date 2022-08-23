@@ -3,7 +3,7 @@
 
 Transform::Transform()
 {
-    _worldBuffer = make_shared<MatrixBuffer>();
+	_worldBuffer = make_shared<MatrixBuffer>();
 }
 
 Transform::~Transform()

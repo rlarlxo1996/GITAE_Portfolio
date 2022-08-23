@@ -59,7 +59,7 @@ bool CircleCollider::IsCollision(shared_ptr<CircleCollider> other, bool isObb)
 	float radius = GetRadius();
 	float radiusOther = other->GetRadius();
 
-	return thisToOther.Length() < (radius + radiusOther);
+    return thisToOther.Length() < (radius + radiusOther);
 }
 
 bool CircleCollider::IsCollision(shared_ptr<RectCollider> rect, bool isObb)
