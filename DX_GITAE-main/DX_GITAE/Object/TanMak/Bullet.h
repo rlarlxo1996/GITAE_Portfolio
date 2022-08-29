@@ -13,6 +13,7 @@ public:
 
 	void SetDirection(const Vector2& direction);
 	void SetAngleDirect(const float& angle);
+	void SetSpeed(float speed) { _speed = speed; }
 
 	bool _isActive = false;
 	int _attack = 1;

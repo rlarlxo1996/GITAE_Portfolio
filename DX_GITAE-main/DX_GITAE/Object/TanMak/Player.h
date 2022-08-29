@@ -38,13 +38,9 @@ private:
 
 	vector<shared_ptr<Action>> _actions;
 
-	shared_ptr<Transform> _gunParent1;
-	shared_ptr<Transform> _gunParent2;
-	shared_ptr<Transform> _gunParent3;
-
-	shared_ptr<class Gun> _gun1;
-	shared_ptr<class Gun> _gun2;
-	shared_ptr<class Gun> _gun3;
+	shared_ptr<Transform> _gunParent;
+	shared_ptr<class Gun> _gun;
+	shared_ptr<class Gun> _aim;
 
 	vector<shared_ptr<class Bullet>> _bullets;
 
@@ -53,7 +49,7 @@ private:
 
 	float _speed = 350.0f;
 	float _time = 0.0f;
-	float _maxTime = 0.4f;
+	float _maxTime = 0.2f;
 
 	virtual void Attack(shared_ptr<Object> object) override;
 };

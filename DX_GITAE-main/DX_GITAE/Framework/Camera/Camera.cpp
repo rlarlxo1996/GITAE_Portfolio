@@ -113,7 +113,7 @@ void Camera::FreeMode()
 			_transform->GetPos().x -= _speed * DELTA_TIME;
 	}
 
-	//_transform->GetPos().y -= _speed * DELTA_TIME;
+	_transform->GetPos().y -= _speed * DELTA_TIME;
 }
 
 void Camera::FollowMode()

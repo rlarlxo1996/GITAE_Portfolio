@@ -3,7 +3,7 @@
 
 Player::Player()
 {
-	_hp = 3;
+	_hp = 5;
 	_attack = 1;
 
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
@@ -54,14 +54,9 @@ void Player::Update()
 	_sprite->Update();
 	_collider->Update();
 
-	_gunParent1->UpdateWorld();
-	_gun1->Update();
-
-	_gunParent2->UpdateWorld();
-	_gun2->Update();
-
-	_gunParent3->UpdateWorld();
-	_gun3->Update();
+	_gunParent->UpdateWorld();
+	_gun->Update();
+	_aim->Update();
 
 	for (auto& action : _actions)
 	{
@@ -158,28 +153,28 @@ void Player::SetIDLE()
 
 void Player::KeyBoardMove()
 {
-	if (KEY_PRESS('W'))
+	if (KEY_PRESS(VK_UP))
 	{
 		_sprite->GetTransform()->GetPos().y += _speed * DELTA_TIME;
 		SetAnimation(Player::State::F_IDLE);
 		return;
 	}
 
-	if (KEY_PRESS('S'))
+	if (KEY_PRESS(VK_DOWN))
 	{
 		_sprite->GetTransform()->GetPos().y -= _speed * DELTA_TIME;
 		SetAnimation(Player::State::F_IDLE);
 		return;
 	}
 
-	if (KEY_PRESS('A'))
+	if (KEY_PRESS(VK_LEFT))
 	{
 		_sprite->GetTransform()->GetPos().x -= _speed * DELTA_TIME;
 		SetAnimation(Player::State::L_MOVE);
 		return;
 	}
 
-	if (KEY_PRESS('D'))
+	if (KEY_PRESS(VK_RIGHT))
 	{
 		_sprite->GetTransform()->GetPos().x += _speed * DELTA_TIME;
 		SetAnimation(Player::State::R_MOVE);
@@ -191,44 +186,23 @@ void Player::KeyBoardMove()
 
 void Player::Fire()
 {
-	for (auto& bullet : _bullets)
+	if (KEY_PRESS(VK_CONTROL))
 	{
-		if (bullet->_isActive == false)
+		for (auto& bullet : _bullets)
 		{
-			bullet->_isActive = true;
-			bullet->GetTransform()->GetPos() = _gunParent1->GetWorldPos();
-			Vector2 dir = MOUSE_WORLD_POS - _gunParent1->GetWorldPos();
-			dir.Normalize();
-			bullet->SetDirection(dir);
-			break;
+			if (bullet->_isActive == false)
+			{
+				bullet->_isActive = true;
+				bullet->SetSpeed(700.0f);
+				bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
+				Vector2 dir = _aim->GetTransform()->GetWorldPos() - _gunParent->GetWorldPos();
+				dir.Normalize();
+				bullet->SetDirection(dir);
+				break;
+			}
 		}
 	}
 
-	for (auto& bullet : _bullets)
-	{
-		if (bullet->_isActive == false)
-		{
-			bullet->_isActive = true;
-			bullet->GetTransform()->GetPos() = _gunParent2->GetWorldPos();
-			Vector2 dir = MOUSE_WORLD_POS - _gunParent2->GetWorldPos() * 1.1f;
-			dir.Normalize();
-			bullet->SetDirection(dir);
-			break;
-		}
-	}
-
-	for (auto& bullet : _bullets)
-	{
-		if (bullet->_isActive == false)
-		{
-			bullet->_isActive = true;
-			bullet->GetTransform()->GetPos() = _gunParent3->GetWorldPos();
-			Vector2 dir = MOUSE_WORLD_POS - _gunParent3->GetWorldPos() * 0.9f;
-			dir.Normalize();
-			bullet->SetDirection(dir);
-			break;
-		}
-	}
 }
 
 void Player::SetAnimation(Player::State state)
@@ -253,25 +227,15 @@ void Player::SetAnimation(Player::State state)
 
 void Player::SetGunPosition()
 {
-	_gunParent1 = make_shared<Transform>();
-	_gunParent1->SetParent(_sprite->GetTransform());
+	_gunParent = make_shared<Transform>();
+	_gunParent->SetParent(_sprite->GetTransform());
 
-	_gun1 = make_shared<Gun>();
-	_gun1->SetPlayer(_gunParent1);
+	_gun = make_shared<Gun>();
+	_gun->SetPlayer(_gunParent);
 
-	_gunParent2 = make_shared<Transform>();
-	_gunParent2->SetParent(_sprite->GetTransform());
-	_gunParent2->GetPos().x = -60.0f;
-
-	_gun2 = make_shared<Gun>();
-	_gun2->SetPlayer(_gunParent2);
-
-	_gunParent3 = make_shared<Transform>();
-	_gunParent3->SetParent(_sprite->GetTransform());
-	_gunParent3->GetPos().x = 60.0f;
-
-	_gun3 = make_shared<Gun>();
-	_gun3->SetPlayer(_gunParent3);
+	_aim = make_shared<Gun>();
+	_aim->SetPlayer(_gunParent);
+	_aim->GetTransform()->GetPos().y += 300.0f;
 }
 
 void Player::Attack(shared_ptr<Object> object)

@@ -7,6 +7,8 @@ StartScene::StartScene()
 	_button->SetPosition(CENTER);
 	_button->SetScale(Vector2(0.1f, 0.1f));
 	_button->SetEvent(std::bind(&StartScene::NextScene, this));
+
+	
 }
 
 StartScene::~StartScene()

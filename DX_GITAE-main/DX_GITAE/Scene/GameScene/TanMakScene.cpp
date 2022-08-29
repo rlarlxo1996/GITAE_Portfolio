@@ -60,9 +60,12 @@ void TanMakScene::PostRender()
 
 void TanMakScene::Init()
 {
-	_player->_isActive = true;
-	_player->GetCollider()->_isActive = false;
 	_player->Init();
+	_player->_isActive = true;
+	_player->GetCollider()->_isActive = true;
+	_player->SetHp(5);
+	
+	Camera::GetInstance()->GetTransform()->GetPos().y = 0;
 }
 
 void TanMakScene::MoveRestrict()

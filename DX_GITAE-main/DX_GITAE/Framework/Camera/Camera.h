@@ -35,6 +35,7 @@ public:
 	void SetRightTop(Vector2 value) { _rightTop = value; }
 
 	shared_ptr<Transform> GetMoveTransform() { return _moveTransform; }
+	shared_ptr<Transform> GetTransform() { return _transform; }
 
 	Vector2 GetMouseWorldPos();
 
