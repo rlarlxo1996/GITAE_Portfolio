@@ -24,5 +24,7 @@ private:
 
 	shared_ptr<Enemy> _enemy;
 
+	vector<shared_ptr<Enemy>> _enemies;
+
 };
 

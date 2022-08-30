@@ -10,7 +10,18 @@ TanMakScene::TanMakScene()
 	_player = make_shared<Player>();
 	_player->GetTransform()->GetPos() = { CENTER.x , CENTER.y - 250 };
 
-	_enemy = make_shared<Enemy>();
+	//_enemy = make_shared<Enemy>();
+
+
+
+	for (int i = 0; i < 10; i++)
+	{
+		shared_ptr<Enemy> enemy = make_shared<Enemy>();
+
+		enemy->GetTransform()->GetPos() = { CENTER.x * i / 2 , CENTER.y };
+
+		_enemies.emplace_back(enemy);
+	}
 	
 	Camera::GetInstance()->SetLeftBottom({ 0, 0 });
 	Camera::GetInstance()->SetRightTop({ _backGround->GetSize().x, _backGround->GetSize().y });
@@ -29,7 +40,7 @@ void TanMakScene::Update()
 
 	_player->Update();
 
-	_enemy->Update();
+	//_enemy->Update();
 
 	PlayerAttack();
 
@@ -41,6 +52,11 @@ void TanMakScene::Update()
 	{
 		PrevScene();
 	}
+
+	for (auto& enemy : _enemies)
+	{
+		enemy->Update();
+	}
 }
 
 void TanMakScene::Render()
@@ -49,7 +65,12 @@ void TanMakScene::Render()
 
 	_player->Render();
 
-	_enemy->Render();
+	//_enemy->Render();
+
+	for (auto& enemy : _enemies)
+	{
+		enemy->Render();
+	}
 }
 
 void TanMakScene::PostRender()
@@ -86,36 +107,42 @@ void TanMakScene::MoveRestrict()
 
 void TanMakScene::PlayerAttack()
 {
-	for (auto& bullet : _player->GetBullet())
+	for (int i = 0; i < 10; i++)
 	{
-		if (bullet->GetCollider()->IsCollision(_enemy->GetCollider()) && bullet->_isActive == true)
+		for (auto& bullet : _player->GetBullet())
 		{
-			bullet->_isActive = false;
-			_enemy->Damaged(_player->GetAttack());
-
-			if (_enemy->_isActive == false)
+			if (bullet->GetCollider()->IsCollision(_enemies[i]->GetCollider()) && bullet->_isActive == true)
 			{
-				_enemy->GetCollider()->_isActive = false;
+				bullet->_isActive = false;
+				_enemies[i]->Damaged(_player->GetAttack());
+
+				if (_enemies[i]->_isActive == false)
+				{
+					_enemies[i]->GetCollider()->_isActive = false;
+				}
+				break;
 			}
-			break;
 		}
 	}
 }
 
 void TanMakScene::EnemyAttack()
 {
-	for (auto& bullet : _enemy->GetBullet())
+	for (int i = 0; i < 10; i++)
 	{
-		if (bullet->GetCollider()->IsCollision(_player->GetCollider()) && bullet->_isActive == true)
+		for (auto& bullet : _enemies[i]->GetBullet())
 		{
-			bullet->_isActive = false;
-			_player->Damaged(_player->GetAttack());
-
-			if (_player->_isActive == false)
+			if (bullet->GetCollider()->IsCollision(_player->GetCollider()) && bullet->_isActive == true)
 			{
-				_player->GetCollider()->_isActive = false;
+				bullet->_isActive = false;
+				_player->Damaged(_player->GetAttack());
+
+				if (_player->_isActive == false)
+				{
+					_player->GetCollider()->_isActive = false;
+				}
+				break;
 			}
-			break;
 		}
 	}
 }
