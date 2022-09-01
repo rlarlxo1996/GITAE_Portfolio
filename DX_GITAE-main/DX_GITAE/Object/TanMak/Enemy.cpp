@@ -27,6 +27,7 @@ Enemy::Enemy()
 	{
 		shared_ptr<Bullet> bullet = make_shared<Bullet>();
 		bullet->_isActive = false;
+		bullet->SetSpeed(200);
 
 		_bullets.emplace_back(bullet);
 	}
@@ -95,6 +96,12 @@ void Enemy::Fire()
 			break;
 		}
 	}
+}
+
+void Enemy::Init()
+{
+	for (auto& bullet : _bullets)
+		bullet->_isActive = false;
 }
 
 void Enemy::Attack(shared_ptr<Object> object)

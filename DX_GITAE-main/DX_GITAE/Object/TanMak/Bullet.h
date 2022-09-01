@@ -24,7 +24,7 @@ private:
 	Vector2 _direction = { 0,0 };
 	float _speed = 500.0f;
 	float _runTime = 0.0f;
-	float _delayTime = 3.0f;
+	float _delayTime = 5.0f;
 	float _angle = 0;
 };
 

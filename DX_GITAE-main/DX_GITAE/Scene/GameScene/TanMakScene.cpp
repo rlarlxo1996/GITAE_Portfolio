@@ -10,15 +10,11 @@ TanMakScene::TanMakScene()
 	_player = make_shared<Player>();
 	_player->GetTransform()->GetPos() = { CENTER.x , CENTER.y - 250 };
 
-	//_enemy = make_shared<Enemy>();
-
-
-
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < enemyCount; i++)
 	{
 		shared_ptr<Enemy> enemy = make_shared<Enemy>();
 
-		enemy->GetTransform()->GetPos() = { CENTER.x * i / 2 , CENTER.y };
+		enemy->GetTransform()->GetPos() = { CENTER.x * i / 3 , CENTER.y  + 300 };
 
 		_enemies.emplace_back(enemy);
 	}
@@ -39,8 +35,6 @@ void TanMakScene::Update()
 	_backGround->Update();
 
 	_player->Update();
-
-	//_enemy->Update();
 
 	PlayerAttack();
 
@@ -65,8 +59,6 @@ void TanMakScene::Render()
 
 	_player->Render();
 
-	//_enemy->Render();
-
 	for (auto& enemy : _enemies)
 	{
 		enemy->Render();
@@ -84,8 +76,16 @@ void TanMakScene::Init()
 	_player->Init();
 	_player->_isActive = true;
 	_player->GetCollider()->_isActive = true;
-	_player->SetHp(5);
+	_player->GetHp();
 	
+	for (int i = 0; i < enemyCount; i++)
+	{
+		_enemies[i]->Init();
+		_enemies[i]->_isActive = true;
+		_enemies[i]->GetCollider()->_isActive = true;
+		_enemies[i]->GetHp();
+	}
+
 	Camera::GetInstance()->GetTransform()->GetPos().y = 0;
 }
 

@@ -10,6 +10,7 @@ public:
 	void Render();
 
 	void Fire();
+	void Init();
 
 	shared_ptr<Collider> GetCollider() { return _collider; }
 	shared_ptr<Transform> GetTransform() { return _quad->GetTransform(); }

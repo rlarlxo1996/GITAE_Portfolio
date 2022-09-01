@@ -7,7 +7,7 @@ Player::Player()
 	_attack = 1;
 
 	_sprite = make_shared<Sprite>(L"Resource/Plane1.png", Vector2(5, 5));
-	_sprite->GetTransform()->GetScale() = { 0.5f,0.5f };
+	_sprite->GetTransform()->GetScale() = { 0.3f,0.3f };
 
 	_collider = make_shared<RectCollider>(_sprite->GetFrameHalfSize());
 	_collider->SetParent(_sprite->GetTransform());
@@ -22,6 +22,7 @@ Player::Player()
 	{
 		shared_ptr<Bullet> bullet = make_shared<Bullet>();
 		bullet->_isActive = false;
+		bullet->SetSpeed(500);
 
 		_bullets.emplace_back(bullet);
 	}
