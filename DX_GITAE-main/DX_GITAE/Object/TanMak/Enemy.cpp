@@ -3,11 +3,11 @@
 
 Enemy::Enemy()
 {
-	_hp = 10;
+	_hp = 5;
 	_attack = 1;
 
 	_quad = make_shared<Quad>(L"Resource/Enemy.png");
-	_quad->GetTransform()->GetScale() = { 0.4f, 0.4f };
+	_quad->GetTransform()->GetScale() = { 0.3f, 0.3f };
 	_quad->GetTransform()->GetPos() = { CENTER.x, CENTER.y + 200 };
 
 	_collider = make_shared<RectCollider>(_quad->GetHalfSize() * 0.15f);

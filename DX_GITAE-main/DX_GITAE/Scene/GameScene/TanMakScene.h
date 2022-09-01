@@ -26,6 +26,6 @@ private:
 
 	vector<shared_ptr<Enemy>> _enemies;
 
-	int enemyCount = 6;
+	int enemyCount = 4;
 };
 

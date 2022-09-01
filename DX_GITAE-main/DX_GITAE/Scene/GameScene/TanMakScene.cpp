@@ -14,7 +14,7 @@ TanMakScene::TanMakScene()
 	{
 		shared_ptr<Enemy> enemy = make_shared<Enemy>();
 
-		enemy->GetTransform()->GetPos() = { CENTER.x * i / 3 , CENTER.y  + 300 };
+		enemy->GetTransform()->GetPos() = { CENTER.x + 100.0f * i , CENTER.y  + 700.0f };
 
 		_enemies.emplace_back(enemy);
 	}
@@ -76,14 +76,14 @@ void TanMakScene::Init()
 	_player->Init();
 	_player->_isActive = true;
 	_player->GetCollider()->_isActive = true;
-	_player->GetHp();
+	_player->SetHp(5);
 	
 	for (int i = 0; i < enemyCount; i++)
 	{
 		_enemies[i]->Init();
 		_enemies[i]->_isActive = true;
 		_enemies[i]->GetCollider()->_isActive = true;
-		_enemies[i]->GetHp();
+		_enemies[i]->SetHp(5);
 	}
 
 	Camera::GetInstance()->GetTransform()->GetPos().y = 0;
@@ -107,7 +107,7 @@ void TanMakScene::MoveRestrict()
 
 void TanMakScene::PlayerAttack()
 {
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < enemyCount; i++)
 	{
 		for (auto& bullet : _player->GetBullet())
 		{
@@ -128,7 +128,7 @@ void TanMakScene::PlayerAttack()
 
 void TanMakScene::EnemyAttack()
 {
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < enemyCount; i++)
 	{
 		for (auto& bullet : _enemies[i]->GetBullet())
 		{
